@@ -66,7 +66,7 @@ The buildpacks for continuous deployment should be in the order below:
     - Heroku/nodejs
     - https://github.com/hone/heroku-buildpack-static
     
-An implementation of this method can be found on [this branch of this repo](https://github.com/Tinitto/hapi-react-spa/tree/non-node-spa-setup).
+An implementation of this method can be found in [this repo](https://github.com/Tinitto/heroku-react-deploy).
 
 Look at this [gist](https://gist.github.com/hone/24b06869b4c1eca701f9) for further details.
 

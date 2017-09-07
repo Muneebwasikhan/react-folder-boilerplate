@@ -41,7 +41,7 @@ if (process.env.NODE_ENV === 'production') {
   server.ext('onRequest', (request, reply) => {
     if (request.headers['x-forwarded-proto'] !== 'https') {
       return reply('Forwarding to secure route').redirect(
-        `https://${request.headers.host}${request.path}${request.url.search}`,
+        `https://${request.headers.host}${request.path}${request.url.search}`
       );
     }
     reply.continue();

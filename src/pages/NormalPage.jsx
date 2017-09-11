@@ -33,7 +33,12 @@ const NormalPage = () => (
     <Route
       exact
       path="/normal/:id"
-      render={props => <DetailContent object={shoppingLists[props.match.params.id]} {...props} />}
+      render={props => (
+        <DetailContent
+          object={shoppingLists.find(list => list.id.toString() === props.match.params.id)}
+          {...props}
+        />
+      )}
     />
   </Switch>
 );

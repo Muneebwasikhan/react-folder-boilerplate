@@ -29,9 +29,15 @@ const DetailContent = (props) => {
   );
 };
 
+// At least an id which is a number should be provided
 DetailContent.propTypes = {
   heading: PropTypes.string,
-  object: PropTypes.objectOf(PropTypes.oneOfType([PropTypes.string, PropTypes.number])).isRequired,
+  object: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    name: PropTypes.string,
+    title: PropTypes.string,
+    heading: PropTypes.string,
+  }).isRequired,
 };
 
 DetailContent.defaultProps = {

@@ -30,9 +30,12 @@ const ListContent = (props) => {
   );
 };
 
-// Failed to make it specific enough to require an id property
 ListContent.propTypes = {
-  objects: PropTypes.arrayOf(PropTypes.object).isRequired,
+  objects: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+    })
+  ).isRequired,
 };
 
 export default ListContent;

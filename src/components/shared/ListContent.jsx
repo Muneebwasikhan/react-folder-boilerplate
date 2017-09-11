@@ -1,4 +1,3 @@
-/* eslint-disable react/no-array-index-key */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
@@ -19,8 +18,8 @@ const ListContent = (props) => {
         {objectList.map((row, i) => (
           <tr key={row.id}>
             <th scope="row">{i}</th>
-            {listHeadings.map((title, j) => (
-              <td key={j}>
+            {listHeadings.map(title => (
+              <td key={`${title}_${row.id}`}>
                 <Link to={`/normal/${row.id}`}>{row[title]}</Link>
               </td>
             ))}

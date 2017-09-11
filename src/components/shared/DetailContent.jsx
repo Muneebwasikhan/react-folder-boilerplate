@@ -1,4 +1,3 @@
-/* eslint-disable react/no-array-index-key */
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -18,8 +17,8 @@ const DetailContent = (props) => {
       <h2>{heading}</h2>
       <table className="table table-responsive">
         <tbody>
-          {Object.keys(object).map((property, i) => (
-            <tr key={i}>
+          {Object.keys(object).map(property => (
+            <tr key={`${property}_${object.id}`}>
               <td>{property}</td>
               <td>{object[property]}</td>
             </tr>

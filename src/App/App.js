@@ -1,16 +1,18 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
-import HomePage from '../pages/HomePage.js';
-import NormalPage from '../pages/NormalPage.js';
-import UnknownPage from '../pages/UnknownPage.js';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import HomePage from '../pages/HomePage';
+import NormalPage from '../pages/NormalPage';
+import UnknownPage from '../pages/UnknownPage';
 import './assets/css/App.css';
 
 const App = () => (
-  <Switch>
-    <Route exact path="/" component={HomePage} />
-    <Route path="/normal" component={NormalPage} />
-    <Route component={UnknownPage} />
-  </Switch>
+  <Router>
+    <Switch>
+      <Route exact path="/" component={HomePage} />
+      <Route path="/normal" component={NormalPage} />
+      <Route component={UnknownPage} />
+    </Switch>
+  </Router>
 );
 
 export default App;

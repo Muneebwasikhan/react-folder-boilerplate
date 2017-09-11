@@ -13,9 +13,9 @@ const DetailContent = (props) => {
     else if (object.heading) heading = object.heading;
   }
   return (
-    <div className="detail_content">
-      <h2>{heading}</h2>
-      <table className="table table-responsive">
+    <div className="table-responsive">
+      <h2 className={props.headerClass}>{heading}</h2>
+      <table className="table">
         <tbody>
           {Object.keys(object).map(property => (
             <tr key={`${property}_${object.id}`}>
@@ -31,6 +31,7 @@ const DetailContent = (props) => {
 
 // At least an id which is a number should be provided
 DetailContent.propTypes = {
+  headerClass: PropTypes.string,
   heading: PropTypes.string,
   object: PropTypes.shape({
     id: PropTypes.number.isRequired,
@@ -42,6 +43,7 @@ DetailContent.propTypes = {
 
 DetailContent.defaultProps = {
   heading: defaultDetailsHeading,
+  headerClass: '',
 };
 
 export default DetailContent;

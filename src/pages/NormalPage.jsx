@@ -1,8 +1,10 @@
 /* eslint-disable react/no-array-index-key */
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
+// import PropTypes from 'prop-types';
 import DetailContent from '../components/shared/DetailContent';
 import ListContent from '../components/shared/ListContent';
+import MainContent from '../components/shared/MainContent';
 
 const shoppingLists = [
   {
@@ -24,23 +26,35 @@ const shoppingLists = [
 
 /* eslint-disable react/prop-types */
 const NormalPage = () => (
-  <Switch>
-    <Route
-      exact
-      path="/normal"
-      render={props => <ListContent objects={shoppingLists} {...props} />}
-    />
-    <Route
-      exact
-      path="/normal/:id"
-      render={props => (
-        <DetailContent
-          object={shoppingLists.find(list => list.id.toString() === props.match.params.id)}
-          {...props}
-        />
-      )}
-    />
-  </Switch>
+  <div className="container-fluid">
+    <div className="row">
+      <MainContent>
+        <Switch>
+          <Route
+            exact
+            path="/normal"
+            render={props => (
+              <div className="table-responsive">
+                <h2 className="sub-header">Shopping Lists</h2>
+                <ListContent headerClass="page-header" objects={shoppingLists} {...props} />
+              </div>
+            )}
+          />
+          <Route
+            exact
+            path="/normal/:id"
+            render={props => (
+              <DetailContent
+                headerClass="page-header"
+                object={shoppingLists.find(list => list.id.toString() === props.match.params.id)}
+                {...props}
+              />
+            )}
+          />
+        </Switch>
+      </MainContent>
+    </div>
+  </div>
 );
 /* eslint-enable react/prop-types */
 

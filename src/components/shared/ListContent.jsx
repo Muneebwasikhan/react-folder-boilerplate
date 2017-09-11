@@ -7,7 +7,7 @@ const ListContent = (props) => {
   const objectList = props.objects;
   const listHeadings = Object.keys(objectList[0]);
   return (
-    <table className="table table-responsive table-hover table-bordered">
+    <table className="table table-hover table-bordered">
       <thead className="thead-inverse">
         <tr>
           <th>#</th>

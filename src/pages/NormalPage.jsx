@@ -5,6 +5,9 @@ import { Switch, Route } from 'react-router-dom';
 import DetailContent from '../components/shared/DetailContent';
 import ListContent from '../components/shared/ListContent';
 import MainContent from '../components/shared/MainContent';
+import Sidebar from '../components/shared/Sidebar';
+import Nav from '../components/shared/Nav';
+import './assets/css/NormalPage.css';
 
 const shoppingLists = [
   {
@@ -24,10 +27,31 @@ const shoppingLists = [
   },
 ];
 
+const linkArray = [
+  {
+    id: 'home',
+    path: '/',
+    anchor: 'home',
+  },
+  {
+    id: 'normal',
+    path: '/normal',
+    anchor: 'normal page',
+  },
+  {
+    id: 'unknown',
+    path: '/random',
+    anchor: '404 page',
+  },
+];
+
 /* eslint-disable react/prop-types */
 const NormalPage = () => (
-  <div className="container-fluid">
-    <div className="row">
+  <div className="lay_fluid-container">
+    <div className="lay_row lay_strict">
+      <Sidebar>
+        <Nav links={linkArray} extraClass="nav-sidebar" />
+      </Sidebar>
       <MainContent>
         <Switch>
           <Route

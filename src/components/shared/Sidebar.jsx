@@ -1,52 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const Sidebar = () => (
-  <div className="col-sm-3 col-md-2 sidebar">
-    <ul className="nav nav-sidebar">
-      <li className="active">
-        <a href="/">
-          Overview <span className="sr-only">(current)</span>
-        </a>
-      </li>
-      <li>
-        <a href="/">Reports</a>
-      </li>
-      <li>
-        <a href="/">Analytics</a>
-      </li>
-      <li>
-        <a href="/">Export</a>
-      </li>
-    </ul>
-    <ul className="nav nav-sidebar">
-      <li>
-        <a href="">Nav item</a>
-      </li>
-      <li>
-        <a href="">Nav item again</a>
-      </li>
-      <li>
-        <a href="">One more nav</a>
-      </li>
-      <li>
-        <a href="">Another nav item</a>
-      </li>
-      <li>
-        <a href="">More navigation</a>
-      </li>
-    </ul>
-    <ul className="nav nav-sidebar">
-      <li>
-        <a href="">Nav item again</a>
-      </li>
-      <li>
-        <a href="">One more nav</a>
-      </li>
-      <li>
-        <a href="">Another nav item</a>
-      </li>
-    </ul>
-  </div>
+const Sidebar = props => (
+  <div className="lay_col on_medium_3 on_large_2 sidebar">{props.children}</div>
 );
+
+Sidebar.propTypes = {
+  children: PropTypes.oneOfType([PropTypes.node, PropTypes.arrayOf(PropTypes.node)]).isRequired,
+};
 
 export default Sidebar;

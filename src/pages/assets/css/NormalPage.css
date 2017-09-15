@@ -1,9 +1,9 @@
-.nav>li {
+.nav > li {
   position: relative;
   display: block;
 }
 
-.nav>li>a {
+.nav > li > a {
   position: relative;
   display: block;
   padding: 10px 15px;
@@ -13,14 +13,11 @@
   display: block;
 }
 
-
 /*
  * Base structure
  */
 
-
 /* Move down content because we have a fixed navbar that is 50px tall */
-
 
 /*body {
   padding-top: 50px;
@@ -30,7 +27,6 @@
    * Global add-ons
    */
 
-
 /**/
 
 .sub-header {
@@ -38,12 +34,10 @@
   border-bottom: 1px solid #eee;
 }
 
-
 /*
    * Top navigation
    * Hide default border to remove 1px line.
    */
-
 
 /*.navbar-fixed-top {
   border: 0;
@@ -53,9 +47,7 @@
    * Sidebar
    */
 
-
 /* Hide for mobile, show later */
-
 
 /**/
 
@@ -70,6 +62,7 @@
     bottom: 0;
     left: 0;
     z-index: 1000;*/
+    min-height: 90vh;
     display: block;
     padding: 20px;
     overflow-x: hidden;
@@ -81,7 +74,6 @@
   }
 }
 
-
 /* Sidebar navigation */
 
 .nav-sidebar {
@@ -91,18 +83,18 @@
   margin-left: -20px;
 }
 
-.nav-sidebar>li>a {
+.nav-sidebar > li > a {
+  text-decoration: none;
   padding-right: 20px;
   padding-left: 20px;
 }
 
-.nav-sidebar>.active>a,
-.nav-sidebar>.active>a:hover,
-.nav-sidebar>.active>a:focus {
+.nav-sidebar > .active > a,
+.nav-sidebar > .active > a:hover,
+.nav-sidebar > .active > a:focus {
   color: #fff;
   background-color: #428bca;
 }
-
 
 /*
    * Main content
@@ -123,11 +115,9 @@
   margin-top: 0;
 }
 
-
 /*
    * Placeholder dashboard ideas
    */
-
 
 /*
 

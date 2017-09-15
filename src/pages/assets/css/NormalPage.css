@@ -39,7 +39,7 @@
    * Hide default border to remove 1px line.
    */
 
-/*.navbar-fixed-top {
+.navbar-fixed-top {
   border: 0;
 }
 
@@ -62,9 +62,10 @@
     bottom: 0;
     left: 0;
     z-index: 1000;*/
-    min-height: 90vh;
+    min-height: 95vh;
     display: block;
     padding: 20px;
+    padding-top: 5px;
     overflow-x: hidden;
     overflow-y: auto;
     /* Scrollable contents if viewport is shorter than content. */
@@ -136,3 +137,38 @@
   border-radius: 50%;
 }
 */
+
+/*
+* My customization
+*/
+#navbar .lay_col {
+  margin-bottom: 0;
+}
+#navbar {
+  background-color: #292b2c;
+}
+#navbar a,
+#navbar {
+  color: #fff;
+}
+#navbar #brand {
+  padding: 10px 15px;
+}
+#navbar a {
+  text-decoration: none;
+}
+#navbar .active a,
+#navbar .active a:hover,
+#navbar .active a:focus {
+  color: #fff;
+  /*opacity: 0.5;*/
+  background-color: #428bca;
+}
+
+#navbar li a:hover,
+#navbar li a:focus,
+.nav-sidebar > li > a:hover,
+.nav-sidebar > li > a:focus {
+  opacity: 0.5;
+  background-color: #428bca;
+}

@@ -17,12 +17,13 @@ class Nav extends Component {
   render() {
     const links = this.props.links;
     const extraClass = this.props.extraClass;
+    const linkClass = this.props.linkClass;
     return (
       <ul className={`nav ${extraClass}`}>
         {links.map((linkElement) => {
           const active = this.state.active === linkElement.id ? 'active' : '';
           return (
-            <li key={linkElement.id} className={active}>
+            <li key={linkElement.id} className={`${active} ${linkClass}`}>
               <Link
                 key={linkElement.id}
                 id={linkElement.id}
@@ -41,6 +42,7 @@ class Nav extends Component {
 
 Nav.propTypes = {
   extraClass: PropTypes.string.isRequired,
+  linkClass: PropTypes.string,
   links: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
@@ -52,6 +54,7 @@ Nav.propTypes = {
 
 Nav.defaultProps = {
   links: [],
+  linkClass: '',
 };
 
 export default Nav;

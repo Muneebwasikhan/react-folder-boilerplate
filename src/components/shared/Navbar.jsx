@@ -1,47 +1,56 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import Nav from './Nav';
 
-const Navbar = () => (
-  <nav className="navbar navbar-inverse navbar-fixed-top">
-    <div className="container-fluid">
-      <div className="navbar-header">
-        <button
-          type="button"
-          className="navbar-toggle collapsed"
-          data-toggle="collapse"
-          data-target="#navbar"
-          aria-expanded="false"
-          aria-controls="navbar"
-        >
-          <span className="sr-only">Toggle navigation</span>
-          <span className="icon-bar" />
-          <span className="icon-bar" />
-          <span className="icon-bar" />
-        </button>
-        <a className="navbar-brand" href="/">
-          Project name
-        </a>
+const Navbar = (props) => {
+  const Navs = props.Navs;
+  const links = props.links;
+  const length = links.length === 0 ? 1 : links.length;
+  const navsDivLength = length % 9;
+  return (
+    <nav id="navbar" className="lay_row lay_strict">
+      <div className="lay_col on_small_12 on_medium_4">
+        <div className="lay_container">
+          <div className="lay_row lay_strict">
+            <div id="brand" className="lay_col on_small_11 on_medium_12">
+              <a className="" href="/">
+                Project name
+              </a>
+            </div>
+            <div className="lay_col on_small_1 on_medium_0">
+              <button type="button">
+                <span className="icon-bar" />
+                <span className="icon-bar" />
+                <span className="icon-bar" />
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
-      <div id="navbar" className="navbar-collapse collapse">
-        <ul className="nav navbar-nav navbar-right">
-          <li>
-            <a href="/">Dashboard</a>
-          </li>
-          <li>
-            <a href="/">Settings</a>
-          </li>
-          <li>
-            <a href="/">Profile</a>
-          </li>
-          <li>
-            <a href="/">Help</a>
-          </li>
-        </ul>
-        <form className="navbar-form navbar-right">
-          <input type="text" className="form-control" placeholder="Search..." />
-        </form>
+      <div
+        className={`lay_col on_small_0 on_medium_${navsDivLength} on_medium_offset_${8 -
+          navsDivLength}`}
+      >
+        <div className="lay_container">
+          <Navs
+            extraClass="lay_row"
+            linkClass={`lay_col on_small_12 on_medium_${12 / length}`}
+            links={links}
+          />
+        </div>
       </div>
-    </div>
-  </nav>
-);
+    </nav>
+  );
+};
 
+Navbar.propTypes = {
+  links: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+      path: PropTypes.string,
+      anchor: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    })
+  ).isRequired,
+  Navs: PropTypes.oneOf([Nav]).isRequired,
+};
 export default Navbar;

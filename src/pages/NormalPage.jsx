@@ -7,6 +7,7 @@ import ListContent from '../components/shared/ListContent';
 import MainContent from '../components/shared/MainContent';
 import Sidebar from '../components/shared/Sidebar';
 import Nav from '../components/shared/Nav';
+import Navbar from '../components/shared/Navbar';
 import './assets/css/NormalPage.css';
 
 const shoppingLists = [
@@ -36,18 +37,19 @@ const linkArray = [
   {
     id: 'normal',
     path: '/normal',
-    anchor: 'normal page',
+    anchor: 'normal',
   },
   {
     id: 'unknown',
     path: '/random',
-    anchor: '404 page',
+    anchor: '404',
   },
 ];
 
 /* eslint-disable react/prop-types */
 const NormalPage = () => (
   <div className="lay_fluid-container">
+    <Navbar Navs={Nav} links={linkArray} />
     <div className="lay_row lay_strict">
       <Sidebar>
         <Nav links={linkArray} extraClass="nav-sidebar" />

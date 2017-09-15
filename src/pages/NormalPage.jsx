@@ -8,6 +8,7 @@ import MainContent from '../components/shared/MainContent';
 import Sidebar from '../components/shared/Sidebar';
 import Nav from '../components/shared/Nav';
 import Navbar from '../components/shared/Navbar';
+import logo from './assets/img/logo.png';
 import './assets/css/NormalPage.css';
 
 const shoppingLists = [
@@ -49,7 +50,7 @@ const linkArray = [
 /* eslint-disable react/prop-types */
 const NormalPage = () => (
   <div className="lay_fluid-container">
-    <Navbar Navs={Nav} links={linkArray} logo="ShoppingList" />
+    <Navbar Navs={Nav} links={linkArray} siteTitle="ShoppingList" logo={logo} onlyLogo={false} />
     <div className="lay_row lay_strict">
       <Sidebar>
         <Nav links={linkArray} extraClass="nav-sidebar" />

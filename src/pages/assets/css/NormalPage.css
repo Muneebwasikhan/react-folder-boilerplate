@@ -158,7 +158,14 @@
 #navbar #brand {
   padding: 10px 15px;
   font-size: 1.5em;
+  height: 2.5em;
 }
+#navbar #brand img {
+  height: auto;
+  width: auto;
+  max-height: 100%;
+}
+
 #navbar a {
   text-decoration: none;
 }

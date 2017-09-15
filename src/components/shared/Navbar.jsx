@@ -1,57 +1,77 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Nav from './Nav';
 
-const Navbar = (props) => {
-  const Navs = props.Navs;
-  const links = props.links;
-  const length = links.length === 0 ? 1 : links.length;
-  const navsDivLength = length % 9;
-  const siteTitle = props.siteTitle;
-  const logoImage = props.onlyLogo ? (
-    <img src={props.logo} alt={siteTitle} />
-  ) : (
-    <span>
-      <img src={props.logo} alt={siteTitle} />
-      {` ${siteTitle}`}
-    </span>
-  );
-  const logo = props.logo.length > 0 ? logoImage : siteTitle;
-  return (
-    <nav id="navbar" className="lay_row lay_strict">
-      <div className="lay_col on_small_12 on_medium_4">
-        <div className="lay_container">
-          <div className="lay_row lay_strict">
-            <div id="brand" className="lay_col on_small_11 on_medium_12">
-              <a className="" href="/">
-                {logo}
-              </a>
-            </div>
-            <div className="lay_col on_small_1 on_medium_0">
-              <button type="button">
-                <span className="icon-bar" />
-                <span className="icon-bar" />
-                <span className="icon-bar" />
-              </button>
+class Navbar extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { navVisible: false };
+    this.handleToggle = this.handleToggle.bind(this);
+  }
+
+  handleToggle() {
+    this.setState(prevState => ({ navVisible: !prevState.navVisible }));
+  }
+
+  render() {
+    const Navs = this.props.Navs;
+    const links = this.props.links;
+    const length = links.length === 0 ? 1 : links.length;
+    const navsDivLength = length % 9;
+    const siteTitle = this.props.siteTitle;
+    const logoImage = this.props.onlyLogo ? (
+      <img src={this.props.logo} alt={siteTitle} />
+    ) : (
+      <span>
+        <img src={this.props.logo} alt={siteTitle} />
+        {` ${siteTitle}`}
+      </span>
+    );
+    const mobileNavsLength = this.state.navVisible ? 12 : 0;
+    const logo = this.props.logo.length > 0 ? logoImage : siteTitle;
+    return (
+      <nav id="navbar" className="lay_row lay_strict">
+        <div className="lay_col on_small_12 on_medium_4">
+          <div className="lay_container">
+            <div className="lay_row lay_strict">
+              <div id="brand" className="lay_col on_small_10 on_medium_12">
+                <a className="" href="/">
+                  {logo}
+                </a>
+              </div>
+              <div className="lay_col on_small_2 on_medium_0">
+                <div className="navbar-inverse" style={{ marginTop: '14%', marginBottom: '14%' }}>
+                  <button
+                    className="navbar-toggler"
+                    type="button"
+                    onClick={this.handleToggle}
+                    data-toggle="collapse"
+                    data-target="#navbarSupportedContent"
+                  >
+                    <span className="navbar-toggler-icon" />
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div
-        className={`lay_col on_small_0 on_medium_${navsDivLength} on_medium_offset_${8 -
-          navsDivLength}`}
-      >
-        <div className="lay_container">
-          <Navs
-            extraClass="lay_row"
-            linkClass={`lay_col on_small_12 on_medium_${12 / length}`}
-            links={links}
-          />
+        <div
+          id="navs"
+          className={`lay_col on_small_${mobileNavsLength} on_medium_${navsDivLength} on_medium_offset_${8 -
+            navsDivLength}`}
+        >
+          <div className="lay_container">
+            <Navs
+              extraClass="lay_row lay_strict"
+              linkClass={`lay_col on_small_12 on_medium_${12 / length}`}
+              links={links}
+            />
+          </div>
         </div>
-      </div>
-    </nav>
-  );
-};
+      </nav>
+    );
+  }
+}
 
 Navbar.propTypes = {
   links: PropTypes.arrayOf(

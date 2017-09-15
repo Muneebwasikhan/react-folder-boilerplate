@@ -7,6 +7,7 @@ const Navbar = (props) => {
   const links = props.links;
   const length = links.length === 0 ? 1 : links.length;
   const navsDivLength = length % 9;
+  const logo = props.logo;
   return (
     <nav id="navbar" className="lay_row lay_strict">
       <div className="lay_col on_small_12 on_medium_4">
@@ -14,7 +15,7 @@ const Navbar = (props) => {
           <div className="lay_row lay_strict">
             <div id="brand" className="lay_col on_small_11 on_medium_12">
               <a className="" href="/">
-                Project name
+                {logo}
               </a>
             </div>
             <div className="lay_col on_small_1 on_medium_0">
@@ -52,5 +53,6 @@ Navbar.propTypes = {
     })
   ).isRequired,
   Navs: PropTypes.oneOf([Nav]).isRequired,
+  logo: PropTypes.oneOf([React.img, PropTypes.string]).isRequired,
 };
 export default Navbar;

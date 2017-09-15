@@ -49,7 +49,7 @@ const linkArray = [
 /* eslint-disable react/prop-types */
 const NormalPage = () => (
   <div className="lay_fluid-container">
-    <Navbar Navs={Nav} links={linkArray} />
+    <Navbar Navs={Nav} links={linkArray} logo="ShoppingList" />
     <div className="lay_row lay_strict">
       <Sidebar>
         <Nav links={linkArray} extraClass="nav-sidebar" />

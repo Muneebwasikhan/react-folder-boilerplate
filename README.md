@@ -1,3 +1,5 @@
+> "_...But he shouted even more loudly, 'Son of David, take pity on me'..."_ 
+
 # React Folder Boilerplate [![Build Status](https://travis-ci.org/Tinitto/react-folder-boilerplate.svg)](https://travis-ci.org/Tinitto/react-folder-boilerplate)
 This is a single page React application boilerplate that enforces a certain folder structure on you for your own good. As per now, it does so only via written rules and not automatically.
 

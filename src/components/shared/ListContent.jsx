@@ -7,7 +7,7 @@ const ListContent = (props) => {
   const objectList = props.objects;
   const listHeadings = Object.keys(objectList[0]);
   return (
-    <table className="table table-responsive table-hover table-bordered">
+    <table className="table table-hover table-bordered">
       <thead className="thead-inverse">
         <tr>
           <th>#</th>
@@ -30,9 +30,12 @@ const ListContent = (props) => {
   );
 };
 
-// Failed to make it specific enough to require an id property
 ListContent.propTypes = {
-  objects: PropTypes.arrayOf(PropTypes.object).isRequired,
+  objects: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+    })
+  ).isRequired,
 };
 
 export default ListContent;

@@ -14,18 +14,8 @@
 }
 
 /*
- * Base structure
- */
-
-/* Move down content because we have a fixed navbar that is 50px tall */
-
-/*body {
-  padding-top: 50px;
-}
-
-/*
-   * Global add-ons
-   */
+     * Global add-ons
+     */
 
 /**/
 
@@ -35,20 +25,17 @@
 }
 
 /*
-   * Top navigation
-   * Hide default border to remove 1px line.
-   */
+     * Top navigation
+     * Hide default border to remove 1px line.
+     */
 
 .navbar-fixed-top {
   border: 0;
 }
 
 /*
-   * Sidebar
-   */
-
-/* Hide for mobile, show later */
-
+     * Sidebar
+     */
 /**/
 
 .sidebar {
@@ -125,8 +112,8 @@
 }
 
 /*
-   * Main content
-   */
+     * Main content
+     */
 
 .main {
   padding: 20px;
@@ -144,30 +131,8 @@
 }
 
 /*
-   * Placeholder dashboard ideas
-   */
-
-/*
-
-.placeholders {
-  margin-bottom: 30px;
-  text-align: center;
-}
-.placeholders h4 {
-  margin-bottom: 0;
-}
-.placeholder {
-  margin-bottom: 20px;
-}
-.placeholder img {
-  display: inline-block;
-  border-radius: 50%;
-}
-*/
-
-/*
-* My customization
-*/
+  * My customization
+  */
 #navbar {
   display: flex;
   align-items: center;

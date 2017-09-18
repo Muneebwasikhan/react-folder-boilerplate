@@ -11,6 +11,7 @@ This is a single page React application boilerplate that enforces a certain fold
 3. [Node](https://nodejs.org/) +v6.11.3
 4. [React Router](https://github.com/ReactTraining/react-router/) +v4.2.2
 5. [Bootstrap](https://v4-alpha.getbootstrap.com) v4.0.0-alpha.6
+6. [Lay.css](https://tinitto.github.io/lay.css/) v0.2
 
 _Other dependencies can be found in the package.json_
 

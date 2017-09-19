@@ -4,9 +4,9 @@ import { Switch, Route } from 'react-router-dom';
 // import PropTypes from 'prop-types';
 import DetailContent from '../components/shared/containers/DetailContent';
 import ListContent from '../components/shared/containers/ListContent';
-import MainContent from '../components/shared/containers/MainContent';
-import Sidebar from '../components/shared/children/Sidebar';
-import Nav from '../components/shared/children/Nav';
+import MainContent from '../components/specific/containers/MainContent';
+import Sidebar from '../components/specific/containers/Sidebar';
+import Nav from '../components/shared/non-containers/Nav';
 
 const shoppingLists = [
   {

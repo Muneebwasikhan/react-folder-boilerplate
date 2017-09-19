@@ -4,8 +4,8 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import HomePage from '../pages/HomePage';
 import NormalPage from '../pages/NormalPage';
 import UnknownPage from '../pages/UnknownPage';
-import Nav from '../components/shared/children/Nav';
-import Navbar from '../components/shared/children/Navbar';
+import Nav from '../components/shared/non-containers/Nav';
+import Navbar from '../components/specific/containers/Navbar';
 import logo from './assets/img/shared/logo.png';
 
 import './assets/css/shared/bootstrap.min.css';

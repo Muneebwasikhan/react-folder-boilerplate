@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 /* NormalPage needs the router since 
 it has route and switch defined in it */
 import { BrowserRouter as Router } from 'react-router-dom';
-import NormalPage from '../../pages/NormalPage';
+import NormalPage from '../NormalPage';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');

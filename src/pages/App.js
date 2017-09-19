@@ -5,9 +5,9 @@ import NormalPage from '../pages/NormalPage';
 import UnknownPage from '../pages/UnknownPage';
 import Nav from '../components/shared/children/Nav';
 import Navbar from '../components/shared/children/Navbar';
-import logo from '../assets/img/logo.png';
-import './assets/css/App.css';
-import '../assets/css/dashboard.css';
+import logo from '../assets/shared/img/logo.png';
+import '../assets/pages/css/App_style.css';
+import '../assets/shared/css/dashboard.css';
 
 const linkArray = [
   {

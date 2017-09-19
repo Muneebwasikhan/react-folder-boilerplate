@@ -8,7 +8,16 @@ const HomePage = () => (
       <h2>Welcome to React Folder Boilerplate</h2>
     </div>
     <p className="App-intro">
-      To get started, edit <code>src/App.js</code> and save to reload.
+      To get started, edit <code>src/pages/App.js</code> and save to reload.
+      <br />
+      For more information, checkout{' '}
+      <a
+        href="https://github.com/Tinitto/react-folder-boilerplate"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        our github repo
+      </a>
     </p>
   </div>
 );

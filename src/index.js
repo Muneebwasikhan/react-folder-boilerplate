@@ -5,7 +5,7 @@ import './assets/shared/css/bootstrap.min.css';
 import './assets/shared/css/lay_.css';
 import './assets/shared/css/index.css';
 import App from './pages/App';
-import registerServiceWorker from './registerServiceWorker';
+import registerServiceWorker from './services/registerServiceWorker';
 
 ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();

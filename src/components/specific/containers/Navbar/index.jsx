@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Nav from './Nav';
+import Nav from '../../../shared/non-containers/Nav';
 
 class Navbar extends Component {
   constructor(props) {

@@ -1,13 +1,18 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+// import 'react-bootstrap/dist/react-bootstrap.min.js';
 import HomePage from '../pages/HomePage';
 import NormalPage from '../pages/NormalPage';
 import UnknownPage from '../pages/UnknownPage';
-import Nav from '../components/shared/children/Nav';
-import Navbar from '../components/shared/children/Navbar';
-import logo from '../assets/img/logo.png';
-import './assets/css/App.css';
-import '../assets/css/dashboard.css';
+import Nav from '../components/shared/non-containers/Nav';
+import Navbar from '../components/specific/containers/Navbar';
+import logo from './assets/img/shared/logo.png';
+
+import './assets/css/shared/bootstrap.min.css';
+import './assets/css/shared/lay_.css';
+
+import './assets/css/specific/App_style.css';
+import './assets/css/specific/App_dashboard.css';
 
 const linkArray = [
   {

@@ -18,7 +18,177 @@ _Other dependencies can be found in the package.json_
 [//]: # (# Justification)
 
 
-[//]: # (# Folder Structure)
+# Folder Structure
+
+```
+    src/
+        index.js
+        index.css
+
+        pages/
+            assets/
+                css/
+                    shared/
+                        bootstrap.min.css
+                        [third_party_css_file].css
+                        ...
+
+                    specific/
+                        App_style.css
+                        App_dashboard.css
+                        [PageFileName]_[cssSpecificName].css
+                        ...
+                img/
+                    shared/
+                        logo.svg
+                        logo.png
+                        footer_copyright.png
+                        ...
+
+                    specific/
+                        HomePage_slider_pic_1.png
+                        HomePage_slider_pic_2.png
+                        [PageFileName]_[imgSpecificName].[ext]
+                        ...
+
+            __test__/
+                App.test.js
+                PageOne.test.js
+                [PageFileName].test.js
+                ...
+
+            App.jsx
+            PageOne.jsx
+            PageTwo.jsx
+            [PageName].jsx
+            ...
+
+        services/
+            serviceOne.js
+            serviceTwo.js
+            [serviceName].js
+            ...
+
+        components/
+            shared/
+                containers/
+                    ContainerOne/
+                        index.jsx
+                        __test__
+                            ContainerOne.test.js
+                            ...
+
+                        assets/
+                            img/
+                                [imageName].[ext]
+                                ...
+                            css/
+                                [styleName].css
+
+                    ContainerTwo/
+                        index.jsx
+                        __test__
+                            ContainerTwo.test.js
+                            ...
+                            
+                        assets/
+                            img/
+                                [imageName].[ext]
+                                ...
+                            css/
+                                [styleName].css
+                            
+                    ...
+                non-containers/
+                    ContainerThree/
+                        index.jsx
+                        __test__
+                            ContainerThree.test.js
+                            ...
+                            
+                        assets/
+                            img/
+                                [imageName].[ext]
+                                ...
+                            css/
+                                [styleName].css
+
+                    ContainerFour/
+                        index.jsx
+                        __test__
+                            ContainerFour.test.js
+                            ...
+                            
+                        assets/
+                            img/
+                                [imageName].[ext]
+                                ...
+                            css/
+                                [styleName].css
+                            
+                    ...
+
+            specific/
+                containers/
+                    ContainerFive/
+                        index.jsx
+                        __test__
+                            ContainerFive.test.js
+                            ...
+                            
+                        assets/
+                            img/
+                                [imageName].[ext]
+                                ...
+                            css/
+                                [styleName].css
+
+                    ContainerSix/
+                        index.jsx
+                        __test__
+                            ContainerSix.test.js
+                            ...
+                            
+                        assets/
+                            img/
+                                [imageName].[ext]
+                                ...
+                            css/
+                                [styleName].css
+                            
+                    ...
+
+                non-containers/
+                    ContainerSeven/
+                        index.jsx
+                        __test__
+                            ContainerSeven.test.js
+                            ...
+                            
+                        assets/
+                            img/
+                                [imageName].[ext]
+                                ...
+                            css/
+                                [styleName].css
+
+                    ContainerEight/
+                        index.jsx
+                        __test__
+                            ContainerEight.test.js
+                            ...
+                            
+                        assets/
+                            img/
+                                [imageName].[ext]
+                                ...
+                            css/
+                                [styleName].css
+                            
+                    ...
+
+```
+
 
 
 [//]: # (# Rules)

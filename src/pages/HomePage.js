@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../assets/shared/img/logo.svg';
+import logo from './assets/img/shared/logo.svg';
 
 const HomePage = () => (
   <div className="App">
